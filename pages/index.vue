@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title">Virtou</h1>
+      <h1 class="title">Virtou Client</h1>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
