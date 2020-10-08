@@ -86,6 +86,7 @@ export default {
   router: {
     base: process.env.ROUTER_BASE || '/virtou-client/'
   },
-  basePath: '/virtou-client/',
-  assetPrefix: '/virtou-client/'
+  static: {
+    prefix: false,
+  }
 }
