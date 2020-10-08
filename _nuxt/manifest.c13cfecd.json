@@ -3,7 +3,7 @@
   "short_name": "virtou-client",
   "description": "## Build Setup",
   "icons": [],
-  "start_url": "/?standalone=true",
+  "start_url": "/virtou-client/?standalone=true",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "black",
