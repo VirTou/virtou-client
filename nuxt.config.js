@@ -44,6 +44,7 @@ export default {
    */
   env: {
     VUE_APP_GOOGLE_MAPS_API_KEY: process.env.VUE_APP_GOOGLE_MAPS_API_KEY,
+    baseUrl: process.env.ROUTER_BASE || '/virtou-client/'
   },
   plugins: [
     '@plugins/vuescroll',
@@ -87,6 +88,6 @@ export default {
     base: process.env.ROUTER_BASE || '/virtou-client/'
   },
   static: {
-    prefix: process.env.ROUTER_BASE || '/virtou-client/'
+    prefix: false
   }
 }

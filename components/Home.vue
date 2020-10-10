@@ -1,11 +1,11 @@
 <template>
   <v-container>
     <div id="background">
-      <img src="/bg.png" />
+      <img src="bg.png" />
     </div>
     <div class="container">
       <div align="center">
-        <img src="/logo.png" height="150px" />
+        <img src="logo.png" height="150px" />
         <h1 class="headline subtitle my-2">
           Enjoy and make memories, leave the planning to us!
         </h1>
