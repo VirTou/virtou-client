@@ -88,6 +88,6 @@ export default {
     base: process.env.ROUTER_BASE || '/virtou-client/'
   },
   static: {
-    prefix: '/virtou-client'
+    prefix: process.env.ROUTER_BASE || '/virtou-client/'
   }
 }
