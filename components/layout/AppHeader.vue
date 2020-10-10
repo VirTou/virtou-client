@@ -13,7 +13,7 @@
         alt="VirTou"
         class="shrink mr-1"
         contain
-        src="/logo.png"
+        src="logo.png"
         transition="scale-transition"
         width="100"
       />
