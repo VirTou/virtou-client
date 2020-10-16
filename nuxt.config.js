@@ -44,7 +44,7 @@ export default {
    */
   env: {
     VUE_APP_GOOGLE_MAPS_API_KEY: process.env.VUE_APP_GOOGLE_MAPS_API_KEY,
-    baseUrl: process.env.ROUTER_BASE || '/virtou-client/'
+    baseUrl: process.env.ROUTER_BASE || '/virtou-client/',
   },
   plugins: [
     '@plugins/vuescroll',
@@ -73,11 +73,19 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
+    '@nuxtjs/apollo',
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: process.env.API_URL || 'http://localhost:3010/grpahql'
+      }
+    }
+  },
   axios: {},
   /*
    ** Build configuration
@@ -87,7 +95,4 @@ export default {
   router: {
     base: process.env.ROUTER_BASE || '/virtou-client/'
   },
-  static: {
-    prefix: process.env.ROUTER_BASE || '/virtou-client/'
-  }
 }
