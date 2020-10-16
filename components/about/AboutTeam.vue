@@ -1,41 +1,30 @@
 <template>
-  <!-- <v-container>
-    <v-card class="about-team white--text">
-      <v-card-text>
-        <div v-for="i in Math.ceil(team.length / 3)" :key="i">
-          <v-row>
-            <div
-              v-for="member in team.slice((i - 1) * 3, (i - 1) * 3 + 3)"
-              :key="member.name"
-              class="ma-0 pa-0"
-            >
-              <v-col cols="4">
-                <MemberCard :member="member" />
-                {{ member.name }} 
-              </v-col>
-            </div>
-          </v-row>
-        </div>
-      </v-card-text>
-    </v-card>
-  </v-container> -->
-
-  <v-container>
-    <v-card class="about-team white--text">
+  <v-container class='ma-0 pa-0'>
+    <v-card class="about-team white--text pa-2">
+      <div class='py-16'>
+      <v-card-title>
+        <h2 class="headline shrink px-6"><b>THE TEAM</b></h2>
+      </v-card-title>
       <v-card-text>
         <v-row>
-          <v-col v-for="member in team" :key="member.name">
+          <v-col cols='12' lg='4' md='12' v-for="member in team" :key="member.name">
             <MemberCard :member="member" />
           </v-col>
         </v-row>
       </v-card-text>
+      </div>
     </v-card>
   </v-container>
 </template>
 
 <script>
+import MemberCard from "./MemberCard";
+
 export default {
   props: ['team'],
+  components: {
+    MemberCard,
+  },
   data() {
     return {}
   },
@@ -44,11 +33,10 @@ export default {
 
 <style scoped>
 .about-team {
-  border-radius: 200px 200px 0px 0px;
+  border-radius: 120px 120px 0px 0px;
   background-color: #0779cc;
-  padding: 100px;
   text-align: justify;
-  margin-top: -276px;
-  margin-bottom: -60px;
+  margin-top: -266px;
+  margin-bottom: -120px;
 }
 </style>

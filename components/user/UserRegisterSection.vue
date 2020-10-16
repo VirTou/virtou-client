@@ -51,6 +51,7 @@
             <span style="color: black">Cookies Policy</span></v-text
           >
         </div>
+        <br />
         <div align="center">
           <v-btn rounded color="secondary" primary>
             <v-text color="primary">

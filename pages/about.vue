@@ -2,26 +2,33 @@
   <v-container class="mb-0 pb-0">
     <div class="bg"></div>
     <div class="fg">
-      <v-row>
-        <v-col cols="12">
-          <div id="about-virtou">
-            <AboutVirtou :text="text" />
-          </div>
-          <div id="how-it-works">
-            <HowItWorks :text="text" />
-          </div>
-          <div id="about-team">
-            <AboutTeam :team="team" />
-          </div>
-        </v-col>
-      </v-row>
+      <v-card class='mt-12 ma-0 pa-0' elevation="0" color='transparent'>
+        <div id='about-virtou'>
+          <AboutVirtou :text="text" />
+        </div>
+        <div id='how-it-works'>
+          <HowItWorks :text="text" />
+        </div>
+        <div id='about-team'>
+          <AboutTeam :team="team" />
+        </div>
+      </v-card>
     </div>
   </v-container>
 </template>
 
 <script>
+import AboutVirtou from "../components/about/AboutVirtou";
+import AboutTeam from "../components/about/AboutTeam";
+import HowItWorks from "../components/about/HowItWorks";
+
 export default {
   name: 'About',
+  components: {
+    AboutVirtou,
+    AboutTeam,
+    HowItWorks,
+  },
   head() {
     return {
       title: 'About Us',
@@ -40,7 +47,7 @@ export default {
         {
           name: 'Nikunj Fotedar',
           designation: 'CO-FOUNDER & CTO',
-          caption: 'The misc. one who bosses around',
+          caption: 'The boss',
           info:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolore.',
         },

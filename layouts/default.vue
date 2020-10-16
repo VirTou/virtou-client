@@ -22,7 +22,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #003C3C;
 }
 
 a:hover {
@@ -42,8 +42,13 @@ a:hover {
 }
 
 .fg {
-  /* min-height: 100vh; */
+  min-height: 100vh;
   display: flex;
   z-index: 1;
+  margin-bottom: 70px;
+}
+
+.def-color {
+  color: #003C3C;
 }
 </style>

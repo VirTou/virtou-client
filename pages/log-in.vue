@@ -1,6 +1,11 @@
 <template>
-  <v-container class="ma-0 pa-0">
-    <div class="ma-4 my-16">
+  <v-container>
+    <div class='bg'></div>
+    <div class='fg' justify='center'>
+      <div class='my-8'>
+      <v-card class='login-mobile' id='card'>
+        <v-card-content>
+    <div class="ma-8 py-12">
       <v-form @submit.prevent="loginUser">
         <div class="ml-2 mr-6 mt-2">
           <b>E-mail</b><br />
@@ -52,7 +57,7 @@
           </v-row>
         </div>
         <div>
-          <v-row>
+          <v-row class='pb-4'>
             <v-col cols='6'>
               <v-btn text small color='transparent'>
                 <GoogleButton />
@@ -66,19 +71,45 @@
           </v-row>
         </div>
       </v-form>
+      </div>
+        </v-card-content>
+      </v-card>
+       </div>
     </div>
   </v-container>
 </template>
 
 <script>
-import GoogleButton from './GoogleButton';
-import FacebookButton from './FacebookButton';
+import GoogleButton from '../components/user/GoogleButton';
+import FacebookButton from '../components/user/FacebookButton';
 
 export default {
-  props: [''],
+  name: 'Login',
   components: {
     GoogleButton,
     FacebookButton,
   },
+  head() {
+    return {
+      title: 'Login Page',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'VirTou Login',
+        },
+      ],
+    }
+  },
 }
 </script>
+
+<style scoped>
+.login-mobile {
+  background-color: #22fbff;
+}
+
+#card {
+  border-radius: 40px;
+}
+</style>

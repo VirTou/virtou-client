@@ -1,12 +1,12 @@
 <template>
   <v-container>
     <div>
-      <v-form>
-        <v-card-title class="headline"> Write to us! </v-card-title>
+      <v-form class='shrink def-color'> 
+        <v-card-title class="display-2 font-weight-bold"> Write to us! </v-card-title>
         <v-card-subtitle>
           You are important to us so is your feedback.
         </v-card-subtitle>
-        <v-card-text>
+        <v-card-text class='body-1 font-weight-bold'>
           <b>
             Name*<br />
             <div class="textbox">
@@ -22,10 +22,10 @@
             </div>
 
             Description*<br />
-            <div class="textarea"><v-textarea rounded /></div>
+            <div class="textarea"><v-textarea auto-grow rounded /></div>
           </b>
         </v-card-text>
-        <v-card-actions>
+        <v-card-actions class='mb-14'>
           <b>Rate your experience</b>
           <v-rating
             color="yellow accent-4"
@@ -45,7 +45,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      categories: ['Complaint', 'Feedback', 'Query', 'Review', 'Suggestion']
+    }
+  }
+}
 </script>
 
 <style scoped>

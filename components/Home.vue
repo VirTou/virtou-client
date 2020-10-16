@@ -1,31 +1,45 @@
 <template>
+  <div class='main-bg'>
   <v-container>
-    <div id="background">
+    <!-- <div id="background">
       <img src="bg.png" />
-    </div>
-    <div class="container">
+      <v-img alt='background' class='shrink main-bg' src='bg.png' transition='scale-transition' />
+    </div> -->
+    <div class='container'>
       <div align="center">
-        <img src="logo.png" height="150px" />
+        <v-img
+        alt="VirTou"
+        class="shrink ml-2"
+        contain
+        src="logo.png"
+        transition="scale-transition"
+        width="350"
+      />
         <h1 class="headline subtitle my-2">
           Enjoy and make memories, leave the planning to us!
         </h1>
         <v-card class="sr-box mt-6">
           <v-row>
-            <v-col cols="9">
-              <v-text-field
+            <v-col cols="9" class="mx-0 px-0">
+              <v-autocomplete
+                clearable
+                rounded
+                :items="cities"
                 placeholder="Enter City"
+                append-icon=""
+                width='220px'
                 v-model="city"
                 background-color="#fff"
-                class="sr-text ml-4 my-0 pa-0"
+                class="my-0 ml-4 pa-0"
                 @keypress.enter="getCityInfo"
-              ></v-text-field>
+              ></v-autocomplete>
             </v-col>
             <v-col cols="3">
               <v-btn
                 color="accent"
                 fab
                 small
-                class="sr-button"
+                class="ma-0 pa-0 sr-button"
                 @click="getCityInfo"
                 ><v-icon>mdi-magnify</v-icon></v-btn
               >
@@ -35,6 +49,7 @@
       </div>
     </div>
   </v-container>
+  </div>
 </template>
 
 <script>
@@ -54,7 +69,7 @@ export default {
   },
   components: {},
   data: () => ({
-    bg_image: { backgroundImage: '/bg.png' },
+    cities: ['Aurangabad', 'Delhi', 'Goa', 'Jaipur'],
     isDepressed: false,
     city: '',
     ht: '',
@@ -73,9 +88,14 @@ export default {
 </script>
 
 <style scoped>
+.main-bg {
+  background-image: url('../static/bg.png');
+  height: 100%;
+}
+
 .container {
   margin: 0 auto;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -103,18 +123,8 @@ export default {
   background-color: rgba(255, 255, 255, 1);
   border-radius: 50px;
   overflow: visible;
-  width: 300px;
+  width: 250px;
   height: 49px;
-}
-
-.sr-text {
-  width: 220px;
-  height: 58px;
-  overflow: visible;
-  text-decoration: none;
-  --web-animation: fadein 0.3s ease-out;
-  --web-action-type: page;
-  cursor: pointer;
 }
 
 .sr-button {
@@ -122,6 +132,5 @@ export default {
   height: 49px;
   overflow: visible;
   bottom: 12px;
-  right: -5px;
 }
 </style>

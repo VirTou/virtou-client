@@ -8,10 +8,10 @@
         {{ blogPost.text }}
       </v-card-text>
       <v-card-actions>
-        <v-btn text><v-icon>mdi-heart</v-icon>{{ blogPost.positive }}</v-btn>
-        <v-btn text><v-icon>mdi-negative</v-icon>{{ blogPost.positive }}</v-btn>
+        <v-btn text><v-icon color='white'>mdi-heart</v-icon>{{ blogPost.positive }}</v-btn>
+        <v-btn text><v-icon color='white'>mdi-minus-box</v-icon>{{ blogPost.positive }}</v-btn>
         <v-spacer></v-spacer>
-        <v-btn text><v-icon>mdi-share</v-icon></v-btn>
+        <v-btn text><v-icon color='white'>mdi-share</v-icon></v-btn>
       </v-card-actions>
     </v-card>
   </v-container>

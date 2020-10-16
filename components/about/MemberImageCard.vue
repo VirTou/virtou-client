@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-card width="269px" class="member-image">
+    <v-card width="269px" class="member-image mb-0">
       <v-img height="210px" width="269px" src="test.png" />
       <v-card-text>
         <b>{{ caption }}</b>

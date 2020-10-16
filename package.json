@@ -23,11 +23,12 @@
     "graphql": "^15.3.0",
     "graphql-tag": "^2.11.0",
     "node-sass": "^4.14.1",
+    "npm-check-updates": "^9.0.4",
     "nuxt": "^2.14.0",
     "sass-loader": "^10.0.2",
     "vue2-google-maps": "^0.10.7",
     "vuescroll": "^4.16.1",
-    "vuetify": "^2.3.10"
+    "vuetify": "^2.3.13"
   },
   "devDependencies": {
     "@mdi/font": "^5.6.55",
