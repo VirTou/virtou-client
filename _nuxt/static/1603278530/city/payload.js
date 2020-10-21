@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/city", {data:[{}],fetch:[],mutations:void 0});
