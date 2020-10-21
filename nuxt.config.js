@@ -87,7 +87,7 @@ export default {
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: "http://localhost:3010/graphql",
+        httpEndpoint: process.env.APOLLO_URL || '',
       }
     }
   },
