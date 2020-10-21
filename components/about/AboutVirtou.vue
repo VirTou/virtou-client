@@ -1,13 +1,13 @@
 <template>
   <v-container class='ma-0 pa-0'>
-    <v-card class="about-card pa-10 pb-12">
+    <v-card class="about-card pa-10 pb-12 pl-16">
       <div class='pb-16'>
       <v-card-title>
-        <h2 class="headline shrink"><b>ABOUT VIRTOU</b></h2>
+        <h2 class="headline title shrink">ABOUT VIRTOU</h2>
       </v-card-title>
       <v-row>
         <v-col cols="12" md='8' sm='12'>
-          <v-card-text>
+          <v-card-text class='text'>
             <p>{{ text.p1 }}</p>
             <p>{{ text.p2 }}</p>
             <p>{{ text.p3 }}</p>
@@ -35,8 +35,22 @@ export default {
 </script>
 
 <style scoped>
+.title {
+  font-family: 'PT Sans Narrow', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 40px !important;
+  font-style: bold !important;
+}
+
+.text {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  font-style: bold !important;
+}
+
 .about-card {
-  border-radius: 120px 120px 0px 0px;
+  border-radius: 180px 180px 0px 0px;
   background-color: #22fbff;
   text-align: justify;
   padding-bottom: 190px;

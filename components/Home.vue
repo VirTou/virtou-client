@@ -1,23 +1,19 @@
 <template>
-  <div class='main-bg'>
-  <v-container>
-    <!-- <div id="background">
-      <img src="bg.png" />
-      <v-img alt='background' class='shrink main-bg' src='bg.png' transition='scale-transition' />
-    </div> -->
+  <div class='main-bg ma-0 pa-0'>
+  <v-container fluid>
     <div class='container'>
       <div align="center">
         <v-img
         alt="VirTou"
-        class="shrink ml-2"
+        class="shrink"
         contain
         src="logo.png"
         transition="scale-transition"
         width="350"
       />
-        <h1 class="headline subtitle my-2">
+        <p class="headline subtitle my-2">
           Enjoy and make memories, leave the planning to us!
-        </h1>
+        </p >
         <v-card class="sr-box mt-6">
           <v-row>
             <v-col cols="9" class="mx-0 px-0">
@@ -25,18 +21,23 @@
                 clearable
                 rounded
                 :items="cities"
-                placeholder="Enter City"
+                item-text="city"
+                item-value='id'
+                hide-no-data
+                placeholder="ENTER CITY"
                 append-icon=""
                 width='220px'
                 v-model="city"
                 background-color="#fff"
-                class="my-0 ml-4 pa-0"
+                class="mt-0 ml-4 pa-0 sr-field"
                 @keypress.enter="getCityInfo"
+                return-object
               ></v-autocomplete>
             </v-col>
             <v-col cols="3">
               <v-btn
                 color="accent"
+                elevation='4'
                 fab
                 small
                 class="ma-0 pa-0 sr-button"
@@ -67,20 +68,24 @@ export default {
       ],
     }
   },
+  props: ['cities'],
   components: {},
   data: () => ({
-    cities: ['Aurangabad', 'Delhi', 'Goa', 'Jaipur'],
     isDepressed: false,
     city: '',
-    ht: '',
   }),
+  computed: {},
   methods: {
     getCityInfo() {
       if (!this.city) {
         this.infobar = true
       } else {
-        this.isDepressed = true
-        this.$router.push(`/city/${this.city}`)
+        this.isDepressed = true;
+        this.$router.push({ name: 'city', params: {
+          city_geo: this.city.geo, 
+          city_id: this.city.id, 
+          city_name: this.city.name,
+        }});
       }
     },
   },
@@ -89,8 +94,12 @@ export default {
 
 <style scoped>
 .main-bg {
-  background-image: url('../static/bg.png');
-  height: 100%;
+  background: url('../static/bg.svg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
 }
 
 .container {
@@ -104,8 +113,10 @@ export default {
 }
 
 .subtitle {
+  font-family: 'Open Sans' !important;
+  font-weight: 600 !important;
+  font-style: bold !important;
   color: #ffffff;
-  word-spacing: 5px;
   padding-bottom: 15px;
 }
 
@@ -124,13 +135,21 @@ export default {
   border-radius: 50px;
   overflow: visible;
   width: 250px;
-  height: 49px;
+  height: 40px;
+}
+
+.sr-field {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 600 !important;
+  font-style: bold !important;
+  bottom: 8px;
 }
 
 .sr-button {
-  width: 49px;
-  height: 49px;
+  width: 40px;
+  height: 40px;
   overflow: visible;
   bottom: 12px;
+  right: -5px;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <v-overlay v-model='userDialog' color='#003c3c' opacity='0.90'>
+  <v-overlay v-model='userDialog' color='#003c3c' opacity='0.8'>
   <v-dialog
     v-model="userDialog"
     max-width="680px"
@@ -18,7 +18,7 @@
         text--bold
         text--color="modalText"
       >
-        <v-row align="center" justify="center">
+        <v-row justify='center'>
           <v-col cols="6" class="user-register-section">
             <UserRegisterSection />
           </v-col>
@@ -65,5 +65,18 @@ export default {
   border-radius: 105px 105px 105px 105px !important;
   background: transparent;
   text-align: justify;
+}
+
+.v-application {
+  font-family: 'PT Sans Narrow', sans-serif !important;
+  font-size: 18px;
+  font-weight: 700 !important;
+  font-style: bold !important;
+}
+div, button, input, optgroup, select, textarea, p, .row {
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 14px;
+  font-weight: 600 !important;
+  font-style: bold !important;
 }
 </style>

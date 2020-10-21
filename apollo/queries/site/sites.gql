@@ -1,0 +1,9 @@
+query GetCitySites($cityid: Float!) {
+  getCitySites(cityid: $cityid) {
+    id
+    name
+    about
+    rank
+    geo
+  }
+}

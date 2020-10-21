@@ -54,15 +54,16 @@
         </v-menu>
       </span>
 
-      <v-toolbar-items class="hidden-xs-only">
-        <v-btn text to="/">Home</v-btn>
-        <v-btn text to="/blogs">Blogs</v-btn>
-        <v-btn text to="/about">About Us</v-btn>
-        <v-btn text to="/contact">Contact</v-btn>
-        <v-btn text x-large fab @click="openUserDialog()">
-          <v-icon color="secondary">mdi-account-circle</v-icon>
-        </v-btn>
-      </v-toolbar-items>
+      <div class="hidden-xs-only">
+        <v-btn text dense to="/">Home</v-btn>
+        <v-btn text dense to="/blogs">Blogs</v-btn>
+        <v-btn text dense to="/about">About Us</v-btn>
+        <v-btn text dense to="/contact">Contact</v-btn></b>
+        <v-btn class='ml-4' elevation="4" small fab color="secondary" @click="openUserDialog()">
+          <v-icon class='ma-0 pa-0' color="primary">mdi-account</v-icon>
+        </v-btn>  
+      </div>
+
       <UserLogin :userDialog="userDialog" @close-dialog="closeUserDialog" />
       <UserLoginMobile :userDialogMobile="userDialogMobile" @close-dialog-mobile='closeUserDialogMobile' />
     </v-app-bar>
@@ -115,19 +116,9 @@ export default {
 </script>
 
 <style scoped>
-.active {
-  font-weight: bold;
-  opacity: 1;
-  visibility: visible;
-  transition: all 0.25s;
-  border-bottom: 5px solid #fff;
-}
-
-li {
-  list-style: none;
-}
-
-li a {
-  text-decoration: none;
+.v-btn {
+  font-family: 'PT Sans Narrow', sans-serif !important;
+  font-weight: 400;
+  font-style: bold;
 }
 </style>

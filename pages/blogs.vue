@@ -1,55 +1,12 @@
 <template>
   <v-container>
-    <div class="bg"></div>
-    <div class="fg">
-      <v-data-iterator
-        :items="blogPosts"
-        :items-per-page.sync="itemsPerPage"
-        :page="page"
-        hide-default-footer
-      >
-        <template v-slot:default="props">
-          <v-row>
-            <v-col
-              v-for="item in props.items"
-              :key="item.title"
-              cols="12"
-              sm="6"
-              md="4"
-              lg="3"
-            >
-              <BlogPostCard :blogPost="item" />
-            </v-col>
-          </v-row>
-        </template>
-        <template v-slot:footer>
-          <v-row class="mt-2" align="center" justify="center">
-            <v-spacer></v-spacer>
-
-            <span class="mr-4 blue--text">
-              Page {{ page }} of {{ numberOfPages }}
-            </span>
-            <v-btn
-              fab
-              dark
-              color="grey darken-3"
-              class="mr-1"
-              @click="formerPage"
-            >
-              <v-icon>mdi-chevron-left</v-icon>
-            </v-btn>
-            <v-btn
-              fab
-              dark
-              color="grey darken-3"
-              class="ml-1"
-              @click="nextPage"
-            >
-              <v-icon>mdi-chevron-right</v-icon>
-            </v-btn>
-          </v-row>
-        </template>
-      </v-data-iterator>
+    <div class='bg'></div>
+    <div class='mt-8'>
+      <v-row class='pa-0' v-masonry>
+        <v-col class='pa-0' no-gutters v-for="(blog, index) in blogPosts" :key="index" cols="12" lg='3' md='4' sm="6">
+          <BlogPostcard :blogPost="blog" />
+        </v-col>
+      </v-row>
     </div>
   </v-container>
 </template>
@@ -73,23 +30,9 @@ export default {
       ],
     }
   },
-  computed: {
-    numberOfPages() {
-      return Math.ceil(this.blogPosts.length / this.itemsPerPage)
-    },
-  },
-  methods: {
-    nextPage() {
-      if (this.page + 1 <= this.numberOfPages) this.page += 1
-    },
-    formerPage() {
-      if (this.page - 1 >= 1) this.page -= 1
-    },
-  },
+  methods: {},
   data() {
     return {
-      itemsPerPageArray: [12, 24, 48],
-      page: 1,
       itemsPerPage: 12,
       blogPosts: [
         {
@@ -195,6 +138,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-</style>

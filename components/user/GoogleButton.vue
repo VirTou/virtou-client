@@ -1,18 +1,28 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="117" height="65" viewBox="0 0 117 65">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="87" height="50" viewBox="0 0 87 50">
   <defs>
-    <filter id="Rectangle_600" x="0" y="0" width="117" height="65" filterUnits="userSpaceOnUse">
+    <filter id="Rectangle_600" x="0" y="0" width="87" height="50" filterUnits="userSpaceOnUse">
       <feOffset dx="1" dy="5" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="2.5" result="blur"/>
       <feFlood flood-opacity="0.231"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>
+    <filter id="Rectangle_1158" x="0" y="0" width="87" height="50" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur-2"/>
+      <feFlood flood-opacity="0.231"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
   </defs>
-  <g id="Group_333" data-name="Group 333" transform="translate(-977.5 -762.5)">
-    <g id="Password" transform="translate(984 731.315)">
+  <g id="Group_333" data-name="Group 333" transform="translate(-993.5 -769.5)">
+    <g id="Password" transform="translate(1000 738.315)">
       <g transform="matrix(1, 0, 0, 1, -6.5, 31.19)" filter="url(#Rectangle_600)">
-        <rect id="Rectangle_600-2" data-name="Rectangle 600" width="102" height="50" rx="25" transform="translate(6.5 2.5)" fill="#fff"/>
+        <rect id="Rectangle_600-2" data-name="Rectangle 600" width="72" height="35" rx="17.5" transform="translate(6.5 2.5)" fill="#fff"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -6.5, 31.19)" filter="url(#Rectangle_1158)">
+        <rect id="Rectangle_1158-2" data-name="Rectangle 1158" width="72" height="35" rx="17.5" transform="translate(6.5 2.5)" fill="#fff"/>
       </g>
     </g>
     <g id="_x31__stroke" transform="translate(1020 774)">
@@ -26,5 +36,4 @@
     </g>
   </g>
 </svg>
-
 </template>

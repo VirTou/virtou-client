@@ -1,9 +1,12 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
+
 import 'vuetify/dist/vuetify.min.css'
 import '@mdi/font/css/materialdesignicons.css'
+// import { VueMasonryPlugin } from "vue-masonry"
 
 Vue.use(Vuetify)
+// Vue.use(VueMasonryPlugin)
 
 export default val => {
   const vuetify = new Vuetify({

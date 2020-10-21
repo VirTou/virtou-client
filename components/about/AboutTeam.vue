@@ -1,9 +1,9 @@
 <template>
   <v-container class='ma-0 pa-0'>
-    <v-card class="about-team white--text pa-2">
+    <v-card class="about-team white--text pa-8">
       <div class='py-16'>
       <v-card-title>
-        <h2 class="headline shrink px-6"><b>THE TEAM</b></h2>
+        <h2 class="headline title shrink px-6">THE TEAM</h2>
       </v-card-title>
       <v-card-text>
         <v-row>
@@ -32,11 +32,25 @@ export default {
 </script>
 
 <style scoped>
+.title {
+  font-family: 'PT Sans Narrow', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 40px !important;
+  font-style: bold !important;
+}
+
+.text {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  font-style: bold !important;
+}
+
 .about-team {
-  border-radius: 120px 120px 0px 0px;
+  border-radius: 180px 180px 0px 0px;
   background-color: #0779cc;
   text-align: justify;
-  margin-top: -266px;
+  margin-top: -280px;
   margin-bottom: -120px;
 }
 </style>

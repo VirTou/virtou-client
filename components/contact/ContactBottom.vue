@@ -2,9 +2,7 @@
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="100%"
-    height="150px"
-    viewBox="0 0 1765 150px"
-  >
+    height="150px">
     <path
       id="Intersection_6"
       data-name="Intersection 6"

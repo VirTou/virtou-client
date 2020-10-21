@@ -1,5 +1,5 @@
 <template>
-  <v-footer color="primary">
+  <v-footer inset color="primary">
     <v-layout justify-center row wrap>
       <v-flex lighten py-1 text-center white--text xs-12 class="caption">
         <v-row class="ma-0 pa-0">
@@ -30,3 +30,10 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+* {
+  font-family: 'PT Sans Narrow', sans-serif !important;
+  font-weight: 400 !important; 
+}
+</style>

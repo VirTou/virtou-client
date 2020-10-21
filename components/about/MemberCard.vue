@@ -6,11 +6,11 @@
       </div>
       <br />
       <div class="member-info">
-        <v-card-title class='pr-0'>{{ member.name }}</v-card-title>
-        <v-card-subtitle class="white--text">{{
+        <v-card-title class='pr-0 title'>{{ member.name }}</v-card-title>
+        <v-card-subtitle class="white--text subtit">{{
           member.designation
         }}</v-card-subtitle>
-        <v-card-text class=''>{{ member.info }}</v-card-text>
+        <v-card-text class='text'>{{ member.info }}</v-card-text>
         <v-card-actions>
           <div cols='6' lg='12'>
           <v-btn text><v-icon color="#fff">mdi-instagram</v-icon></v-btn>
@@ -38,6 +38,26 @@ export default {
 </script>
 
 <style scoped>
+.title {
+  font-family: 'PT Sans Narrow', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 24px !important;
+  font-style: bold !important;
+}
+
+.subtit {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  font-style: bold !important;
+}
+
+.text {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+}
+
 .member-card {
   background-color: 'transparent';
   color: white;

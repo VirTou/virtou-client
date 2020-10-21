@@ -32,7 +32,12 @@ export default {
       rel: 'icon',
       type: 'image/x-icon',
       href: '/favicon.ico',
-    }, ],
+    },
+    {
+      rel: "stylesheet", 
+      href: "https://fonts.googleapis.com/css2?family=PT+Sans&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Open+Sans:ital,wght@0,300;0,600;0,700;1,300&family=PT+Sans+Narrow:wght@400;700&display=swap", 
+    }
+    ],
   },
   /*
    ** Global CSS
@@ -50,7 +55,11 @@ export default {
     '@plugins/vuescroll',
     '@plugins/vuetify',
     {
-      src: '@plugins/google-maps',
+      src: '@plugins/masonry',
+      mode: 'client',
+    },
+    {
+      src: '@plugins/google-maps', 
       mode: 'client',
     },
   ],
@@ -73,19 +82,19 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
-    '@nuxtjs/apollo',
+    '@nuxtjs/apollo'
   ],
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: "http://localhost:3010/graphql",
+      }
+    }
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  apollo: {
-    clientConfigs: {
-      default: {
-        httpEndpoint: process.env.API_URL || 'http://localhost:3010/grpahql'
-      }
-    }
-  },
   axios: {},
   /*
    ** Build configuration

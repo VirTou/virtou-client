@@ -18,7 +18,7 @@ export default {
 
 <style>
 html {
-  font-family: Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'PT Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

@@ -1,12 +1,12 @@
 <template>
   <div>
-    <Home />
+    <Home :cities="cities" />
   </div>
 </template>
 
 <script>
 import Home from '@/components/Home';
-// import citiesQuery from "~/apollo/queries/city/cities";
+import citiesQuery from "~/apollo/queries/city/cities";
 
 export default {
   name: 'App',
@@ -18,36 +18,43 @@ export default {
       cities: [],
     }
   },
+  apollo: {
+    cities: {
+      prefetch: true,
+      query: citiesQuery
+    }
+  },
   // apollo: {
-  //   cities: {
-  //     prefectch: true,
-  //     query: citiesQuery
-  //   }
+  //   cities: gql `
+  //     query getCities {
+  //       cities {
+  //         id
+  //         city
+  //       }
+  //   }` 
   // },
   // created() {
   //   this.getCities();
   // },
   // methods: {
-  //   async getCities() {
-  //     try {
-  //       console.log(process.env.apiUrl);
-  //       const res = await axios.post(
-  //         process.env.apiUrl, {
-  //           query: `
-  //             getCities() {
+  //   getCities() {
+  //     axios({
+  //       url: "http://localhost:3010/graphql",
+  //       method: 'post',
+  //       data: {
+  //         query: `
+  //           query getCities {
+  //             cities {
   //               id
-  //               name
+  //               city
   //             }
-  //           `
-  //         }, { header: {
-  //           'Content-Type': 'application/json'
-  //         }
-  //       });
-  //       console.log(res);
-  //     } catch(error) {
-  //       console.log(error);
-  //     }
+  //           }
+  //         `
+  //       }
+  //     }).then((result) => {
+  //       console.log(result.data.data.cities)
+  //     });
   //   },
-  // },
+  // }
 }
 </script>

@@ -7,18 +7,14 @@
           <div v-if="$vuetify.breakpoint.mdAndUp">
             <div class="contact-lg">
               <v-row>
-                <v-col cols="5" md="5" sm="12" xs="12">
-                  <div class="contact-form">
+                <v-col cols="12" md="5" sm="12" xs="12">
+                  <div class="contact-form pl-10 pr-6">
                     <ContactForm />
                   </div>
                 </v-col>
-                <v-col cols="7" md="7" sm="12">
-                  <div class="contact-social-tree-lg" v-if="$vuetify.breakpoint.width<=1940 && $vuetify.breakpoint.width>1366">
-                    <ContactSocialTree />
-                  </div>
-                  <div class="contact-social-tree-md" v-else>
-                    <ContactSocialTree width='100%' height='100%' />
-                  </div>
+                <v-col cols='0' md='1' sm='0' xs='0'></v-col>
+                <v-col cols="12" md="6" sm="12">
+                  <ContactSocialTree width='100%' />
                 </v-col>
               </v-row>
             </div>
@@ -70,7 +66,7 @@ export default {
     }
   },
   mounted() {
-    console.log(this.$vuetify.breakpoint.width);
+    // console.log(this.$vuetify.breakpoint.width);
   }
 }
 </script>
@@ -79,9 +75,9 @@ export default {
 .contact-lg {
   border-radius: 200px 200px 0px 0px;
   background-color: #22fbff;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: 0px;
-  padding: 80px;
+  padding: 30px;
 }
 
 .contact-bottom {
@@ -90,11 +86,12 @@ export default {
 }
 
 .contact-social-tree-lg {
-  margin-bottom: -8%;
+  /* position: fixed; */
+  /* margin-bottom: -8%; */
 }
 
 .contact-social-tree-md {
-  position: relative;
+  /* position: fixed; */
   bottom: -280px;
   margin-bottom: 50px;
 }

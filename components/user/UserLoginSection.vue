@@ -1,11 +1,13 @@
 <template>
   <v-container class="ma-0 pa-0">
-    <div class="ma-4 my-16">
+    <div class="ml-8 my-16 mr-4">
       <v-form @submit.prevent="loginUser">
         <div class="ml-2 mr-6 mt-2">
           <b>E-mail</b><br />
           <v-text-field
-            filled
+            solo
+            height='40px'
+            width='220px'
             rounded
             small
             dense
@@ -15,7 +17,9 @@
         <div class="ml-2 mr-6 mt-2">
           <b>Password</b><br />
           <v-text-field
-            filled
+            height='40px'
+            width='220px'
+            solo
             rounded
             small
             dense
@@ -24,11 +28,13 @@
           ></v-text-field>
         </div>
         <div>
-          <v-row>
-            <v-col cols="1">
+          <v-row class='ml-4'>
+            <!-- <v-col cols="2"> -->
               <v-checkbox color='#F27F1B' class="ma-0 pa-0" />
-              </v-col>
-            <v-col cols="11" class='align-right'>keep me logged in</v-col>
+              <!-- </v-col> -->
+            <!-- <v-col cols="10" class='align-right'> -->
+              keep me logged in
+            <!-- </v-col> -->
           </v-row>
         </div>
         <div>
@@ -52,17 +58,18 @@
           </v-row>
         </div>
         <div>
-          <v-row>
+          <v-row class='ml-4'>
             <v-col cols='6'>
-              <v-btn text small color='transparent'>
+              <v-btn height='50' width='75' color='transparent' small text>
                 <GoogleButton />
               </v-btn>
             </v-col>
             <v-col cols='6'>
-            <v-btn color="transparent" small text>
+              <v-btn height='50' width='75' color='transparent' small text>
                 <FacebookButton />
               </v-btn>
             </v-col>
+            <v-col cols='2'></v-col>
           </v-row>
         </div>
       </v-form>

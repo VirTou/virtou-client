@@ -5,8 +5,8 @@ import 'vuescroll/dist/vuescroll.css';
 Vue.use(vuescroll, {
   ops: {
     rail: {
-      opacity: '0.2',
-      size: '5px',
+      opacity: '0',
+      size: '2px',
       background: 'rgb(100, 100, 100)',
     },
     bar: {

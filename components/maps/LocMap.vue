@@ -1,8 +1,8 @@
 <template>
   <v-container fluid class="pt-6 pa-0 ma-0">
-    <gmap-map :center="center" :map-type-id="mapTypeId" :zoom="6">
+    <gmap-map :center="city.center" :map-type-id="mapTypeId" :zoom="12">
       <gmap-marker
-        v-for="(item, index) in markers"
+        v-for="(item, index) in geo"
         :key="index"
         :position="item.position"
         @click="center = item.position"
@@ -14,14 +14,10 @@
 
 <script>
 export default {
+  props: ['geo', 'city'],
   data() {
     return {
-      center: { lat: -3.350235, lng: 111.995865 },
       mapTypeId: 'roadmap',
-      markers: [
-        { position: { lat: -0.48585, lng: 117.1466 } },
-        { position: { lat: -6.9127778, lng: 107.6205556 } },
-      ],
     }
   },
 }
