@@ -42,7 +42,7 @@ a:hover {
 }
 
 .fg {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   z-index: 1;
   margin-bottom: 70px;

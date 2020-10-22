@@ -19,8 +19,8 @@
                 </v-col>
               </v-row>
             </div>
-            <div class="contact-bottom">
-              <ContactBottom />
+            <div class="contact-bottom pb-n16 mb-n16">
+              <ContactBottom height='170px' />
             </div>
           </div>
           <div v-else>
@@ -78,12 +78,12 @@ export default {
 }
 
 .contact-bottom {
-  margin-top: -160px;
-  margin-bottom: -70px;
+  margin-top: -168px;
+  padding-bottom: -300px !important;
 }
 
 .diff-pad {
-  margin-bottom: -80px;
+  margin-bottom: -94px;
 }
 
 .contact-social-tree-md {
