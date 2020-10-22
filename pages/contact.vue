@@ -1,20 +1,21 @@
 <template>
-  <v-container class='mb-n10'>
+  <v-container class='mb-n10 mt-0'>
     <div class="bg contact-bg"></div>
-    <div class="fg">
+    <div class="fg mt-10">
       <v-row>
         <v-col cols="12">
           <div v-if="$vuetify.breakpoint.mdAndUp">
             <div class="contact-lg">
               <v-row>
-                <v-col cols="12" md="5" sm="12" xs="12">
+                <v-col cols="12" md="6" sm="12" xs="12">
                   <div class="contact-form pl-10 pr-6">
                     <ContactForm />
                   </div>
                 </v-col>
-                <v-col cols='0' md='1' sm='0' xs='0'></v-col>
                 <v-col cols="12" md="6" sm="12">
-                  <ContactSocialTree width='100%' />
+                  <div :class="($vuetify.breakpoint.width < 1905 && $vuetify.breakpoint.width>1260) ? 'diff-pad' : ''">
+                    <ContactSocialTree width='100%' />
+                  </div>
                 </v-col>
               </v-row>
             </div>
@@ -65,9 +66,6 @@ export default {
       categories: ['Complaint', 'Feedback', 'Query', 'Review', 'Suggestion'],
     }
   },
-  mounted() {
-    // console.log(this.$vuetify.breakpoint.width);
-  }
 }
 </script>
 
@@ -75,19 +73,17 @@ export default {
 .contact-lg {
   border-radius: 200px 200px 0px 0px;
   background-color: #22fbff;
-  margin-top: 30px;
   margin-bottom: 0px;
   padding: 30px;
 }
 
 .contact-bottom {
-  margin-top: -150px;
+  margin-top: -160px;
   margin-bottom: -70px;
 }
 
-.contact-social-tree-lg {
-  /* position: fixed; */
-  /* margin-bottom: -8%; */
+.diff-pad {
+  margin-bottom: -80px;
 }
 
 .contact-social-tree-md {
@@ -107,12 +103,12 @@ export default {
 .cnt-sm {
   border-radius: 120px 120px 0px 0px;
   background-color: #22fbff;
-  margin: 50px 0px 50px 0px;
+  margin: 0px 0px 50px 0px;
   padding: 40px 5px 30px 5px;
 }
 
 .cnt-sm-bt {
-  margin-top: -92px;
+  margin-top: -115px;
   margin-bottom: -100px;
 }
 </style>

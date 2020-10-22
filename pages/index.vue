@@ -5,8 +5,8 @@
 </template>
 
 <script>
-import Home from '@/components/Home';
-import citiesQuery from "~/apollo/queries/city/cities";
+import Home from '@/components/Home'
+import citiesQuery from '~/apollo/queries/city/cities'
 
 export default {
   name: 'App',
@@ -21,8 +21,12 @@ export default {
   apollo: {
     cities: {
       prefetch: true,
-      query: citiesQuery
-    }
+      query: citiesQuery,
+      error(error) {
+        console.log(error);
+        this.$router.push('blogs');
+      },
+    },
   },
   // apollo: {
   //   cities: gql `
@@ -31,7 +35,7 @@ export default {
   //         id
   //         city
   //       }
-  //   }` 
+  //   }`
   // },
   // created() {
   //   this.getCities();

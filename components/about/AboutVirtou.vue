@@ -1,7 +1,8 @@
 <template>
-  <v-container class='ma-0 pa-0'>
-    <v-card class="about-card pa-10 pb-12 pl-16">
-      <div class='pb-16'>
+  <v-container class='mx-0 mb-0 px-0 pb-0'>
+    <v-card class="about-card"
+      :class="$vuetify.breakpoint.mdAndUp ? 'border-rad-md' : 'border-rad-sm'">
+      <div class='pad-bottom'>
       <v-card-title>
         <h2 class="headline title shrink">ABOUT VIRTOU</h2>
       </v-card-title>
@@ -15,8 +16,10 @@
         </v-col>
       </v-row>
       <v-row v-if="$vuetify.breakpoint.smAndUp">
-        <v-col cols="10" lg='11' sm='10'></v-col>
-        <v-col cols="2" lg='1' sm='2' class='my-0 py-0'><LocationIcon fill="#F27F18" /></v-col>
+        <v-col cols="11" lg='11' md='10' sm='10'></v-col>
+        <v-col cols="1" lg='1' md='2' sm='2' class='my-0 py-0' :class="($vuetify.breakpoint.width < 1905 && $vuetify.breakpoint.width>1260) ? 'extra-mar' : ''">
+          <LocationIcon fill="#F27F18" />
+        </v-col>
       </v-row>
       </div>
     </v-card>
@@ -50,10 +53,25 @@ export default {
 }
 
 .about-card {
-  border-radius: 180px 180px 0px 0px;
   background-color: #22fbff;
   text-align: justify;
-  padding-bottom: 190px;
-  margin-top: 50px;
+}
+
+.pad-bottom {
+  padding-bottom: 200px;
+}
+
+.extra-mar {
+  margin-bottom: -20px !important;
+}
+
+.border-rad-md {
+  border-radius: 200px 200px 0px 0px;
+  padding: 60px 80px 0px 80px;
+}
+
+.border-rad-sm {
+  border-radius: 120px 120px 0px 0px;
+  padding: 60px 20px 0px 20px;
 }
 </style>

@@ -89,7 +89,8 @@ export default {
       default: {
         httpEndpoint: process.env.APOLLO_URL || '',
       }
-    }
+    },
+    errorHandler: '~/plugins/apollo-error-handler.js',
   },
   /*
    ** Axios module configuration

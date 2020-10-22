@@ -24,17 +24,18 @@
 
             Description*<br />
             <div class="textarea">
-              <vue-scroll><v-textarea solo dense rounded ></v-textarea></vue-scroll>
+              <v-textarea solo dense rounded no-resize></v-textarea>
             </div>
         </v-card-text>
         <v-card-actions>
-          <b>Rate your experience &nbsp;</b>
+          <p class='pa-0 ma-0 shrink'>Rate your experience &nbsp;</p>
           <v-rating
             color="yellow accent-4"
             background-color="white"
             empty-icon="$ratingFull"
             dense
             hover
+            class='pa-0 ma-0'
           />
           <v-spacer></v-spacer>
           <v-btn rounded class="black--text" color="secondary"

@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <div class='bg'></div>
-    <div class='mt-8'>
+    <div class='mt-10'>
       <v-row class='pa-0' v-masonry>
         <v-col class='pa-0' no-gutters v-for="(blog, index) in blogPosts" :key="index" cols="12" lg='3' md='4' sm="6">
           <BlogPostcard :blogPost="blog" />

@@ -1,35 +1,6 @@
 <template>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    width="90.402"
-    height="146.102"
-    viewBox="0 0 90.402 146.102"
-  >
-    <defs>
-      <filter
-        id="pinpoint"
-        x="0"
-        y="0"
-        width="90.402"
-        height="146.102"
-        filterUnits="userSpaceOnUse"
-      >
-        <feOffset dx="12" dy="20" input="SourceAlpha" />
-        <feGaussianBlur stdDeviation="3" result="blur" />
-        <feFlood flood-opacity="0.161" />
-        <feComposite operator="in" in2="blur" />
-        <feComposite in="SourceGraphic" />
-      </filter>
-    </defs>
-    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#pinpoint)">
-      <path
-        id="pinpoint-2"
-        data-name="pinpoint"
-        d="M112.732,74.22C93.744,74.22,78.06,91.868,78.06,113.3a42.927,42.927,0,0,0,3.551,17.213l1.9,3.651,29.28,57.161,28.919-56.442.361-.7a1.718,1.718,0,0,1,.209-.416l.475-.927h0l1.063-2.081h0a42.889,42.889,0,0,0,3.646-17.4C147.424,91.868,131.758,74.22,112.732,74.22Zm0,50.9a11.973,11.973,0,1,1,11.184-12.768v.813a11.6,11.6,0,0,1-11.184,11.954Z"
-        transform="translate(-78.06 -74.22)"
-      />
-    </g>
+  <svg xmlns="http://www.w3.org/2000/svg" width="90.402" height="146.102" viewBox="0 0 90.402 146.102">
+    <path id="pinpoint" d="M123.224,74.22c-24.734,0-45.164,22.018-45.164,48.756a51.626,51.626,0,0,0,4.625,21.475l2.473,4.555L123.3,220.322l37.669-70.42.47-.873a2.11,2.11,0,0,1,.272-.519l.618-1.156h0l1.385-2.6h0a51.591,51.591,0,0,0,4.749-21.711C168.412,96.238,148.007,74.22,123.224,74.22Zm0,63.505c-8.624.554-16.087-5.666-16.672-13.894s5.93-15.352,14.554-15.914,16.093,5.651,16.686,13.879v1.015c.278,7.951-6.236,14.62-14.568,14.915Z" transform="translate(-78.06 -74.22)" />
   </svg>
 </template>
 

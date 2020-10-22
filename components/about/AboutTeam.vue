@@ -1,9 +1,8 @@
 <template>
   <v-container class='ma-0 pa-0'>
-    <v-card class="about-team white--text pa-8">
-      <div class='py-16'>
+    <v-card class="about-team white--text" :class="$vuetify.breakpoint.mdAndUp ? 'border-rad-md' : 'border-rad-sm'">
       <v-card-title>
-        <h2 class="headline title shrink px-6">THE TEAM</h2>
+        <h2 class="headline title shrink">THE TEAM</h2>
       </v-card-title>
       <v-card-text>
         <v-row>
@@ -12,7 +11,6 @@
           </v-col>
         </v-row>
       </v-card-text>
-      </div>
     </v-card>
   </v-container>
 </template>
@@ -50,7 +48,17 @@ export default {
   border-radius: 180px 180px 0px 0px;
   background-color: #0779cc;
   text-align: justify;
-  margin-top: -280px;
+  margin-top: -245px;
   margin-bottom: -120px;
+}
+
+.border-rad-md {
+  border-radius: 200px 200px 0px 0px;
+  padding: 60px 80px 30px 80px;
+}
+
+.border-rad-sm {
+  border-radius: 120px 120px 0px 0px;
+  padding: 60px 20px 30px 20px;
 }
 </style>

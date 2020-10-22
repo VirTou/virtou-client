@@ -1,8 +1,8 @@
 <template>
   <v-container class="mb-0 pb-0">
     <div class="bg"></div>
-    <div class="fg">
-      <v-card class='mt-12 ma-0 pa-0' elevation="0" color='transparent'>
+    <div class="fg mt-10">
+      <v-card class='ma-0 pa-0' elevation="0" color='transparent'>
         <div id='about-virtou'>
           <AboutVirtou :text="text" />
         </div>

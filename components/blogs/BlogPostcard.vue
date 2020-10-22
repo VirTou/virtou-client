@@ -60,7 +60,7 @@ export default {
 
 .text {
   font-family: 'Open Sans', sans-serif !important;
-  font-weight: 600 !important;
+  font-weight: 400 !important;
   font-size: 14px !important;
   font-style: bold !important;
 }
