@@ -24,7 +24,9 @@
 
             Description*<br />
             <div class="textarea">
-              <v-textarea solo dense rounded no-resize></v-textarea>
+              <vue-scroll>
+                <v-textarea solo dense rounded no-resize></v-textarea>
+              </vue-scroll>
             </div>
         </v-card-text>
         <v-card-actions>

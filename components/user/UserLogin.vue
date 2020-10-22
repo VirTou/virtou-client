@@ -1,5 +1,6 @@
 <template>
   <v-overlay v-model='userDialog' color='#003c3c' opacity='0.8'>
+  <vuescroll>
   <v-dialog
     v-model="userDialog"
     max-width="680px"
@@ -9,10 +10,8 @@
     @click:outside='closeDialog'
   >
     <div class='user-card'>
-      <vue-scroll>
       <v-card
-        max-width="650px"
-        class="ml-4"
+        max-width="660px"
         color="transparent"
         elevation='0'
         text--bold
@@ -27,9 +26,9 @@
           </v-col>
         </v-row>
       </v-card>
-      </vue-scroll>
     </div>
   </v-dialog>
+  </vuescroll>
   </v-overlay>
 </template>
 
@@ -62,8 +61,8 @@ export default {
 }
 
 .card-user-login {
-  border-radius: 105px 105px 105px 105px !important;
-  background: transparent;
+  border-radius: 110px !important;
+  background-image: url('../../static/login_section_bg.svg');
   text-align: justify;
 }
 
