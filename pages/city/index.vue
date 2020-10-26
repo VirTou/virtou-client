@@ -26,19 +26,20 @@
             class='pa-0 ma-0'
             id='exp-panel'
             elevation='4'
+            @click='clickedMarker(item)'
           >
             <v-card
               id='card'
-              class="ma-2 px-3 scroll"
+              class="ma-2 px-1 py-0 scroll"
               shaped 
               color='accent'
             >
               <v-expansion-panel-header>
-                <v-card-title class="ma-0 py-1">
-                  <h2 class="subtitle-1">{{ item.name }}</h2>
+                <v-card-title class="ma-0 pa-0">
+                  <h2 class="title">{{ item.rank }}.&nbsp;{{ item.name }}</h2>
                 </v-card-title>
               </v-expansion-panel-header>
-              <v-expansion-panel-content>
+              <v-expansion-panel-content class='text'>
                 {{ item.about }}
               </v-expansion-panel-content>
             </v-card>
@@ -50,7 +51,25 @@
       <p>Loading...</p>
     </div>
     <div v-else id='map' ref='map'>
-      <LocMap :geo="getGeo()" :city='city'/>
+      <LocMap :geo="getSiteData()" :markerId='id' :city='city'/>
+    </div>
+    <div>
+      <v-snackbar
+        v-model='snackbar'
+        :timeout='2000'
+      >
+        {{ snackbarText }}
+        <template v-slot:action="{ attrs }">
+          <v-btn
+            color="secondary"
+            text
+            v-bind='attrs'
+            @click="snackbar=false"
+            >
+            Close
+          </v-btn>
+        </template>  
+      </v-snackbar>
     </div>
   </v-container>
 </template>
@@ -101,6 +120,14 @@ export default {
     }
   },
   methods: {
+    clickedMarker(item) {
+      this.id = item.id;
+      if(item.geo == "NaN") {
+        this.snackbar = true;
+        this.snackbarText = "GeoLocation not Present.";
+      }
+      console.log(item);
+    },
     goBack() {
       this.$router.go(-1)
     },
@@ -109,7 +136,7 @@ export default {
       // var ht = this.$refs.map.clientHeight + "px";
       // Vue.set(this.navStyle, 'height', ht);
     },
-    getGeo() {
+    getSiteData() {
       if(this.geoSites.length < 1) {
         var val = {};
         var pos = {};
@@ -119,9 +146,13 @@ export default {
             var lat = parseFloat(site['geo'].split(',')[0]);
             var lng = parseFloat(site['geo'].split(',')[1]);
             var name = site['name'];
-            this.geoSites.push({'position': {'lat': lat,
+            var rank = parseInt(site['rank']);
+            var id = parseInt(site['id']);
+            this.geoSites.push({'position': {'id': id,
+                                          'lat': lat,
                                           'lng': lng,
-                                          'name': name}});
+                                          'name': name,
+                                          'rank': rank}});
         });
         }
       }
@@ -149,6 +180,9 @@ export default {
   },
   data() {
     return {
+      id: null,
+      snackbar: false,
+      snackbarText: '',
       geoSites: [],
       navStyle: {},
       getCitySites: [],
@@ -169,6 +203,19 @@ export default {
 </script>
 
 <style scoped>
+.title {
+  font-family: 'PT Sans', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 20px !important;
+  word-break: keep-all;
+}
+
+.text {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 12px !important;
+}
+
 #nav-drawer {
   background-color: transparent;
   backdrop-filter: blur(5px);
@@ -222,7 +269,7 @@ li {
   min-width: 0px;
   height: 56px;
   min-height: 56px;
-  border-radius: 0px;
+  border-radius: 5px;
 }
 
 .btn::before {

@@ -62,9 +62,7 @@
         <br />
         <div align="center">
           <v-btn rounded color="secondary" primary>
-            <v-text color="primary">
-              <span style="color: #707070"><strong>SIGN UP</strong></span>
-            </v-text>
+            <span style="color: #707070"><strong>SIGN UP</strong></span>
           </v-btn>
         </div>
       </v-form>

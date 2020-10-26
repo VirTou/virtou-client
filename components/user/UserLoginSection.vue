@@ -29,19 +29,13 @@
         </div>
         <div>
           <v-row class='ml-4'>
-            <!-- <v-col cols="2"> -->
-              <v-checkbox color='#F27F1B' class="ma-0 pa-0" />
-              <!-- </v-col> -->
-            <!-- <v-col cols="10" class='align-right'> -->
-              keep me logged in
-            <!-- </v-col> -->
+            <v-checkbox color='#F27F1B' class="ma-0 pa-0" />
+            keep me logged in
           </v-row>
         </div>
         <div>
-          <v-btn rounded color="secondary" primary>
-            <v-text color="primary">
-              <span style="color: #707070"><strong>LOGIN</strong></span>
-            </v-text>
+          <v-btn class='bttn' rounded color="secondary" primary>
+            <span style="color: #707070"><strong>LOGIN</strong></span>
           </v-btn>
         </div>
         <div>
@@ -60,12 +54,12 @@
         <div>
           <v-row class='ml-4'>
             <v-col cols='6'>
-              <v-btn height='50' width='75' color='transparent' small text>
+              <v-btn class='bttn' height='50' width='75' color='transparent' small text>
                 <GoogleButton />
               </v-btn>
             </v-col>
             <v-col cols='6'>
-              <v-btn height='50' width='75' color='transparent' small text>
+              <v-btn class='bttn' height='50' width='75' color='transparent' small text>
                 <FacebookButton />
               </v-btn>
             </v-col>

@@ -51,4 +51,16 @@ a:hover {
 .def-color {
   color: #003C3C;
 }
+
+.bttn::before {
+  background-color: transparent;
+}
+
+.bttn i:hover {
+  transform: scale(1.2);
+}
+
+.bttn::after {
+  border: none;
+}
 </style>

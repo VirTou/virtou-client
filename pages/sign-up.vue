@@ -2,12 +2,12 @@
   <v-container>
     <div class='bg'></div>
     <div class='fg' justify='center'>
-      <div class='my-8'>
+      <div class='mt-8'>
       <v-card class='signup-mobile' id='card'>
-        <v-card-content>
-          <div class="my-2 py-12">
+        <v-card-text>
+          <div class="ma-0 py-6">
             <v-form @submit.prevent="registerUser">
-              <div class="ml-8 mr-4 mt-2">
+              <div class=" mr-4 ml-8 mt-2">
                 <b>Name</b><br />
                 <v-text-field
                   filled
@@ -50,23 +50,21 @@
                 ></v-text-field>
               </div>
               <div class="ml-8 mr-4 mt-2 caption">
-                <v-text style="color: white"
+                <p style="color: white"
                   >By signing up, you agree to our
                   <span style="color: black">Terms, Data</span> and
-                  <span style="color: black">Cookies Policy</span></v-text
+                  <span style="color: black">Cookies Policy</span></p
                 >
               </div>
               <br />
               <div align="center">
                 <v-btn rounded color="secondary" primary>
-                  <v-text color="primary">
-                    <span style="color: #707070"><strong>SIGN UP</strong></span>
-                  </v-text>
+                  <span style="color: #707070"><strong>SIGN UP</strong></span>
                 </v-btn>
               </div>
             </v-form>
           </div>
-        </v-card-content>
+        </v-card-text>
       </v-card>
       </div>
     </div>

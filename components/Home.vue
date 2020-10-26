@@ -20,6 +20,10 @@
               <v-autocomplete
                 clearable
                 rounded
+                menu-props="{
+                  nudge-bottom: true !important,
+                  bottom: true,
+                }"
                 :items="cities"
                 item-text="city"
                 item-value='id'

@@ -40,7 +40,7 @@
             class='pa-0 ma-0'
           />
           <v-spacer></v-spacer>
-          <v-btn rounded class="black--text" color="secondary"
+          <v-btn rounded class="bttn black--text" color="secondary"
             ><b>SUBMIT</b></v-btn
           >
         </v-card-actions>

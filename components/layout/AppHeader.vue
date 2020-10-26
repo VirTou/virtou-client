@@ -55,13 +55,13 @@
       </span>
 
       <div class="hidden-xs-only">
-        <v-btn text dense to="/">Home</v-btn>
-        <v-btn text dense to="/blogs">Blogs</v-btn>
+        <v-btn text dense to="/">Search</v-btn>
+        <v-btn text dense to="/blogs">Discover</v-btn>
         <v-btn text dense to="/about">About Us</v-btn>
-        <v-btn text dense to="/contact">Contact</v-btn></b>
-        <v-btn class='ml-4' elevation="4" small fab color="secondary" @click="openUserDialog()">
+        <v-btn text dense to="/contact">Contact</v-btn>
+        <v-btn class='ml-4 bttn' elevation="4" small fab color="secondary" @click="openUserDialog()">
           <v-icon class='ma-0 pa-0' color="primary">mdi-account</v-icon>
-        </v-btn>  
+        </v-btn>
       </div>
 
       <UserLogin :userDialog="userDialog" @close-dialog="closeUserDialog" />
@@ -86,8 +86,8 @@ export default {
       userDialog: false,
       userDialogMobile: false,
       items: [
-        { title: 'Home', link: '/' },
-        { title: 'Blogs', link: '/blogs' },
+        { title: 'Search', link: '/' },
+        { title: 'Discover', link: '/blogs' },
         { title: 'About Us', link: '/about' },
         { title: 'Contact', link: '/contact' },
       ],
