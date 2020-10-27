@@ -87,7 +87,7 @@ export default {
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: process.env.APOLLO_URL || '',
+        httpEndpoint: process.env.APOLLO_URL,
       }
     },
     errorHandler: '~/plugins/apollo-error-handler.js',
