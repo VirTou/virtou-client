@@ -16,12 +16,13 @@ jobs:
         run: |
           npm install
           npm run generate 
+        env: 
+          APOLLO_URL: ${{ secrets.APOLLO_URL }}
+          VUE_APP_GOOGLE_MAPS_API_KEY: ${{ secrets.VUE_APP_GOOGLE_MAPS_API_KEY }}
+      
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
           FOLDER: dist
-        env: 
-          APOLLO_URL: ${{ secrets.APOLLO_URL }}
-          VUE_APP_GOOGLE_MAPS_API_KEY: ${{ secrets.VUE_APP_GOOGLE_MAPS_API_KEY }}
