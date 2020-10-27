@@ -24,7 +24,6 @@ export default {
       query: citiesQuery,
       error(error) {
         console.log(error);
-        // this.$router.push('blogs');
       },
     },
   },
