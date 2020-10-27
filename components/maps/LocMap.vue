@@ -8,7 +8,7 @@
         :position="item.position"
         :icon="iconOption(item)"
         :clickable="true"
-        :animation="(item.position.id==markerId)? 4: 6"
+        :animation="(item.position.id==markerId)? 1: 6"
         @click="toggleInfoWin(item)"
       ></gmap-marker>
        <gmap-info-window

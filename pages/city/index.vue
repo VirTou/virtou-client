@@ -121,12 +121,15 @@ export default {
   },
   methods: {
     clickedMarker(item) {
-      this.id = item.id;
-      if(item.geo == "NaN") {
-        this.snackbar = true;
-        this.snackbarText = "GeoLocation not Present.";
+      if(this.id == item.id) {
+        this.id = null;
+      } else {
+        this.id = item.id;
+        if(item.geo == "NaN") {
+          this.snackbar = true;
+          this.snackbarText = "GeoLocation not Present.";
+        }
       }
-      console.log(item);
     },
     goBack() {
       this.$router.go(-1)
